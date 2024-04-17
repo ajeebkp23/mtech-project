@@ -1,0 +1,91 @@
+\documentclass[12pt, a4paper]{report}
+
+% CUSAT M.Tech Thesis Format
+% Thesis format adheres to the specifications in the REGULATIONS FOR THE M.TECH PROGRAMMES
+% offered by the Departments / Schools of the Cochin University of Science and Technology 
+% with effect from 2016 admissions.
+% Original Author Arjun Sanker, DCS CUSAT 
+% Collaborator S Meena Padnekar, DCS CUSAT
+
+
+%---------------------------------ESSENTIAL PACKAGES------------------------------------------------------
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[top=1.5cm, bottom=2.2cm, outer=2cm, inner=3cm, headsep=1.2cm, headheight=0.3cm, foot=0.3cm, footskip=1cm, textheight=24.5cm, textwidth=16cm, heightrounded, includehead, includefoot]{geometry}
+\usepackage{lipsum}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{array}
+\usepackage{tabularx}
+%----------------------------------END ESSENTIAL PACKAGES END------------------------------------------------- 
+
+%------------------------------USER DEFINITIONS---------------------------------------------------------------
+
+                                                        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\mytitle{Your Thesis Title} %-----------------------> Add the title of your thesis
+\def\myname{Your Name}%---------------------------------> Add your name
+\def\mydegree{Master of Technology}%--------------------> Add your Degree
+\def\myspecialization{Computer and Information Science}%->Add your Specialization
+\def\myregnum{Your Reg Number}%-------------------------> Add your register number
+\def\myguide{Your Guide}%-------------------------------> Add the name of your guide
+\def\myhod{Dr. Philip Samuel}%--------------------------> Add the name of your HOD
+\def\mydep{Department of Computer Science}%-------------> Add your Department
+\def\myuni{Cochin University of Science and Technology}%-> Add your University
+\def\myyear{2021}%--------------------------------------> Add the year of your viva
+\def\mymonth{April}%------------------------------------> Add the month of your viva
+\def\mydate{22}%----------------------------------------> Add the date of your viva
+\def\myplace{Ernakulam}%--------------------------------> Add the place (Since it's CUSAT, don't change it)
+\def\shortTitle{Project Short Title}%-------------------> Project short title for header.
+                                                        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%---------------------------END USER DEFINITIONS END--------------------------------------------------------
+
+
+%----------------------------------ADD ADDITIONAL PACKAGES HERE-----------------------------------------------
+
+
+
+%-----------------------------------END ADDITIONAL PACKAGES END-----------------------------------------------
+
+
+\onehalfspacing %   REGULATIONS STIPULATE ONE HALF SPACING
+\begin{document}
+
+    %------------FRONT PAGES---------------------------------------------------
+    \include{FrontPages/titlePage}
+    \include{FrontPages/certificate}
+    \include{FrontPages/decleration}
+    \include{FrontPages/acknowledgement}
+    
+    %-----------ABSTRACT--------------------------------------------------------
+    \pagenumbering{roman}
+    \include{FrontPages/abstract}
+    
+    %-----------TOC And Other Items---------------------------------------------
+    \tableofcontents
+    \listoffigures
+    \listoftables
+
+
+
+    \clearpage
+    \pagestyle{fancy}
+    \pagenumbering{arabic}
+    \lhead{\shortTitle{}}
+    \rhead{\nouppercase{\leftmark}}
+    \cfoot{\thepage}
+    
+   
+    % ---------------CHAPTERS-----------------------------------------------------
+    \include{Chapters/Introduction}
+    \include{Chapters/LiteratureSurvey}
+    \include{Chapters/ProposedSystem}
+    \include{Chapters/Result}
+    \include{Chapters/Conclusion}
+
+
+    %----------BIBLIOGRAPHY--------------------------------------------------------
+    \bibliographystyle{ieeetr}
+    \bibliography{ref}
+    
+\end{document}
+
