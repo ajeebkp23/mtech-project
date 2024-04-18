@@ -1,13 +1,24 @@
 \begin{chapter}{Literature Survey}
 
-\par This includes many paragraphs about research papers surveyed during the research.
+    \begin{section}{Translation and Types}
+        Even though we are doing transliterations our workflow is very closely related to existing machine translation systems. So various approaches to translation are found to be fit for our transliteration use cases as well. A paper demonstrated phonetic based similarity search in Japanese language describe how much useful it was to use a transliterated intermediate representation to find the similarity in the both languages with different scripts. Such studies are even relevant in other languages as well.
+        \subsection{Rule Based Machine Translation}
+        It is a commonly used technique in the past. In which certain rules are used for translating from one language to another. This is based on expertise from subject matter experts or linguists only. So this method has a lot of effort to prepare data and all. Also, adaptation to other domains or areas is difficult normally since it involves a lot of manual effort.
+        
+        \subsection{Statistical Machine Translation}
+        It is a type of technique in which both probability and statistics measures are taken for analyzing the input language and producing the expected output language by translation or transliteration in our case. In a previous study with LSTMs + attention and WAT corpus-based studies give a BLEU score between 0.46 to 13.09 and 0.49 to 15.41 respectively.
 
-\par other paragraphs are quite possible and needed in every sense.
+        \subsection{other combinations}
+        There are many other various configurations that were studied in different studies. NMT with Shallow Layer, SMT assisted by NLM, NMT with DNN, NMT with Attention Mechanisms, Fully Attentio-based NMT, Advanced NMT models ConvS2S, Transformer and Transformer based, etc. are studied in various studies with varying degrees of effort and success.
 
-\par Probably include a table with enough references.
+        
+    \end{section}
+    \begin{section}{Backtranslation}
+   Many papers like "Phrase-Based \& Neural Unsupervised Machine Translation" have discussed the need, impact, and usefulness of Backtranslation for providing synthetic data. Especially languages like our case, ie. a language with multiple script options are compared in many studies. Some languages like Hebrew are mentioned as example in some studies. Those papers mention those techniques are found to have some advantages.
+    \end{section}
 
-\par Categorize the included references if possible
-
-\par speak about Dataset used
+    \begin{section}{Research Gap}
+        Even though many studies are focusing on Indian Languages in general. Most studies focusing on either different problems are being solved like translation or sentiment analysis or Manglish to Malayalam like transliteration models are not explored much. So our study is to utilize the given insights to build a transliteration model that converts from Manglish script to Malayalam Script.
+    \end{section}
     
 \end{chapter}
